@@ -3,10 +3,16 @@
 
 #include <X11/XF86keysym.h>
 
-/* Volume */
+
+static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
+static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
+
+
+/* Volume https://gist.github.com/palopezv/efd34059af6126ad970940bcc6a90f2e */
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+#define XF86XK_AudioMicMute 0x1008FFB2
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -104,11 +110,14 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-/* Volume */
-	{ MODKEY,                       XK_F1, spawn, {.v = downvol } },
-	{ MODKEY,                       XK_F2,  spawn, {.v = mutevol } },
-	{ MODKEY,                       XK_F3, spawn, {.v = upvol   } },
+	/* Brightness*/
+	{0,		XF86XK_MonBrightnessUp,		spawn,          {.v = brupcmd} },
+    {0,		XF86XK_MonBrightnessDown,	spawn,          {.v = brdowncmd} },
 
+/* Volume */
+	{ 0,	XF86XK_AudioLowerVolume,	spawn, {.v = downvol } },
+	{ 0,    XF86XK_AudioMute,			spawn, {.v = mutevol } },
+	{ 0,    XF86XK_AudioRaiseVolume,	spawn, {.v = upvol   } },
 };
 
 /* button definitions */
