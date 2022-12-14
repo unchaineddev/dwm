@@ -16,7 +16,7 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -76,6 +76,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *brave[]  = { "brave", NULL };
+static const char *thunderbird[] = { "thunderbird", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -83,6 +84,7 @@ static const Key keys[] = {
 	{ MODKEY,					    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,				XK_f,      spawn,          {.v = firefox } },
 	{ MODKEY|ShiftMask,				XK_b,      spawn,          {.v = brave } },
+	{ MODKEY|ShiftMask,				XK_t,	   spawn,		   {.v = thunderbird } }, 
 	/*Rotate Stack Patch */	
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
