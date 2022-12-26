@@ -14,6 +14,10 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 #define XF86XK_AudioMicMute 0x1008FFB2
 
+/* Screenshot using Scrot */
+static const char *screenshot[] = {"scrot", "/home/yusuf/Pictures/%d-%m-%Y.png", NULL}; 
+
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
@@ -132,6 +136,9 @@ static const Key keys[] = {
 	{ 0,	XF86XK_AudioLowerVolume,	spawn, {.v = downvol } },
 	{ 0,    XF86XK_AudioMute,			spawn, {.v = mutevol } },
 	{ 0,    XF86XK_AudioRaiseVolume,	spawn, {.v = upvol   } },
+
+	/* Screenshot */
+	{ 0,	XK_Print,					spawn,{.v = screenshot}},
 };
 
 /* button definitions */
