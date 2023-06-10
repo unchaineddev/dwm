@@ -38,7 +38,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -81,6 +81,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *brave[]  = { "brave", NULL };
 static const char *thunderbird[] = { "thunderbird", NULL};
+static const char *keepassxc[] = { "keepassxc", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,6 +90,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_f,      spawn,          {.v = firefox } },
 	{ MODKEY|ShiftMask,				XK_b,      spawn,          {.v = brave } },
 	{ MODKEY|ShiftMask,				XK_t,	   spawn,		   {.v = thunderbird } }, 
+	{ ControlMask|ShiftMask,		XK_k,	   spawn,		   {.v = keepassxc } }, 
 	/*Rotate Stack Patch */	
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
@@ -123,7 +125,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
+	//TAGKEYS(                        XK_7,                      6)
 	//TAGKEYS(                        XK_8,                      7)
 	//TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
