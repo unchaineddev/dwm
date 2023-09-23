@@ -5,7 +5,7 @@
 
 
 // Theme 
-#include "/home/yusuf/stuff/mygit/suckless/dwm/themes/red.h"
+#include "/home/yusuf/dev/1github/suckless/dwm/themes/red.h"
 
 //static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 //static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
@@ -18,7 +18,7 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 #define XF86XK_AudioMicMute 0x1008FFB2
 
 /* Screenshot using Scrot */
-static const char *screenshot[] = {"scrot", "/home/yusuf/Pictures/%d-%m-%Y.png", NULL}; 
+static const char *screenshot[] = {"scrot", "/home/yusuf/pictures/%d-%m-%Y.png", NULL}; 
 
 
 /* appearance */
