@@ -5,7 +5,7 @@
 
 
 // Theme 
-#include "/home/yusuf/dev/1github/suckless/dwm/themes/red.h"
+#include "/home/yusuf/dev/github/suckless/dwm/themes/moonfly.h"
 
 //static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 //static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
@@ -89,15 +89,17 @@ static const char *firefox[]  = { "firefox", NULL };
 static const char *brave[]  = { "brave", NULL };
 static const char *thunderbird[] = { "thunderbird", NULL};
 static const char *keepassxc[] = { "keepassxc", NULL};
+static const char *thunar[] = { "thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,					    XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,				XK_f,      spawn,          {.v = firefox } },
-	{ MODKEY|ShiftMask,				XK_b,      spawn,          {.v = brave } },
-	{ MODKEY|ShiftMask,				XK_t,	   spawn,		   {.v = thunderbird } }, 
-	{ ControlMask|ShiftMask,		XK_k,	   spawn,		   {.v = keepassxc } }, 
+	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,		XK_f,      spawn,          {.v = firefox } },
+	{ MODKEY|ShiftMask,		XK_b,      spawn,          {.v = brave } },
+	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   {.v = thunderbird } }, 
+	{ ControlMask|ShiftMask,	XK_k,	   spawn,	   {.v = keepassxc } }, 
+	{ MODKEY, 			XK_e,	   spawn,  	   {.v = thunar } },
 	/*Rotate Stack Patch */	
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
