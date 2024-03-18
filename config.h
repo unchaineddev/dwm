@@ -5,7 +5,7 @@
 
 
 // Theme 
-#include "/home/yusuf/dev/github/suckless/dwm/themes/moonfly.h"
+#include "/home/yusuf/dev/git/suckless/dwm/themes/moonfly.h"
 
 //static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 //static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
@@ -90,6 +90,7 @@ static const char *brave[]  = { "brave", NULL };
 static const char *thunderbird[] = { "thunderbird", NULL};
 static const char *keepassxc[] = { "keepassxc", NULL};
 static const char *thunar[] = { "thunar", NULL};
+static const char *signal_desktop[] = { "signal-desktop", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -100,6 +101,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_t,	   spawn,	   {.v = thunderbird } }, 
 	{ ControlMask|ShiftMask,	XK_k,	   spawn,	   {.v = keepassxc } }, 
 	{ MODKEY, 			XK_e,	   spawn,  	   {.v = thunar } },
+	{ ControlMask| ShiftMask, 	XK_s,      spawn,          {.v = signal_desktop } }, 
+
 	/*Rotate Stack Patch */	
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
@@ -171,4 +174,5 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
 
