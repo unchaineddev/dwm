@@ -5,7 +5,7 @@
 
 
 // Theme 
-#include "/home/yusuf/dev/git/suckless/dwm/themes/moonfly.h"
+#include "/home/yusuf/dev/git/suckless/dwm/themes/dracula.h"
 
 //static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 //static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
